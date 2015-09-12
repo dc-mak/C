@@ -1,0 +1,10 @@
+/* C's struct layout must be in the order specified but the total size may be
+ * padded to make it fit 4/8 byte multiples (32/64 bit)
+ * so on a 64-bit machine, this struct of 1032 bytes is padded to 1088 and so
+ * 1088*100 is the size of the file
+ *
+ * Although making conn global clears up code a bit, it introduces several
+ * problems in keeping track of whether or not memory has been initialised
+ * 
+ * i could have definitely put conn and db on the stack instead of the heap as global
+ */

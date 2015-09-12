@@ -1,0 +1,45 @@
+All of the operators I had come across before.
+This file is a quick reference for only the keywords that I am either
+	#	unfamiliar with or
+	#	mean something different than in Java (my only C-like syntax
+		reference point so far).
+
+auto		give a local variable a local lifetime
+const		make a variable unmodifiable
+extern		declare an identifier is defined externally
+register	declare a variable be stored in a CPU register
+signed		a signed modifier for *integer* data types
+sizeof		determine the size of data
+static		preserve variable value after is scope exits
+struct		combine variables into a single record
+typedef		create a new types
+union		start a union statement
+unsigned	an unsigned modifier for integer data types
+void		declare a data type empty
+volatile	declare a variable that might be modified elsewhere
+
+enum { CONST_1, ..., CONST_N } NAME;
+
+if (ERROR_TEST) {
+	goto fail;
+}
+
+fail:
+	CODE;
+
+typedef DEFINITION IDENTIFIER;
+	e.g. typedef unsigned char byte;
+
+[typedef] struct NAME {
+	ELEMENTS;
+} [VARIABLE_NAME];
+
+union NAME {
+	ELEMENTS;
+} [VARIABLE_NAME];
+
+type *ptr	a pointer name ptr to type
+*ptr		the value of whatever ptr is pointed at
+*(ptr + i)	the value of "whatever ptr is pointed at plus i"
+&thing		the address of thing
+ptr++		increment where ptr points

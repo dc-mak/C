@@ -1,0 +1,3 @@
+[submodule "lcthw/learn-c-the-hard-way-lectures"]
+	path = lcthw/learn-c-the-hard-way-lectures
+	url = https://github.com/zedshaw/learn-c-the-hard-way-lectures.git

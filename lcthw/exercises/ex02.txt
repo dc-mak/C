@@ -1,0 +1,64 @@
+-Wall
+    This enables all the warnings about constructions that some users
+    consider questionable, and that are easy to avoid (or modify to
+    prevent the warning), even in conjunction with macros.  This also
+    enables some language-specific warnings described in C++ Dialect
+    Options and Objective-C and Objective-C++ Dialect Options.
+
+    -Wall turns on the following warning flags:
+
+    -Waddress -Warray-bounds=1 (only with -O2) -Wc++11-compat
+    -Wc++14-compat -Wchar-subscripts -Wenum-compare (in C/ObjC; this is
+    on by default in C++) -Wimplicit-int (C and Objective-C only)
+    -Wimplicit-function-declaration (C and Objective-C only) -Wcomment
+    -Wformat -Wmain (only for C/ObjC and unless -ffreestanding)
+    -Wmaybe-uninitialized -Wmissing-braces (only for C/ObjC) -Wnonnull
+    -Wopenmp-simd -Wparentheses -Wpointer-sign -Wreorder -Wreturn-type
+    -Wsequence-point -Wsign-compare (only in C++) -Wstrict-aliasing
+    -Wstrict-overflow=1 -Wswitch -Wtrigraphs -Wuninitialized
+    -Wunknown-pragmas -Wunused-function -Wunused-label -Wunused-value
+    -Wunused-variable -Wvolatile-register-var
+
+	Note that some warning flags are not implied by -Wall.  Some of them
+	warn about constructions that users generally do not consider
+	questionable, but which occasionally you might wish to check for;
+	others warn about constructions that are necessary or hard to avoid
+	in some cases, and there is no simple way to modify the code to
+	suppress the warning. Some of them are enabled by -Wextra but many
+	of them must be enabled individually.Note that some warning flags are not implied by -Wall.  Some of them
+	warn about constructions that users generally do not consider
+	questionable, but which occasionally you might wish to check for;
+	others warn about constructions that are necessary or hard to avoid
+	in some cases, and there is no simple way to modify the code to
+	suppress the warning. Some of them are enabled by -Wextra but many
+	of them must be enabled individually.
+
+-g  Produce debugging information in the operating system's native
+    format (stabs, COFF, XCOFF, or DWARF 2).  GDB can work with this
+    debugging information.
+
+    On most systems that use stabs format, -g enables use of extra
+    debugging information that only GDB can use; this extra information
+    makes debugging work better in GDB but probably makes other
+    debuggers crash or refuse to read the program.  If you want to
+    control for certain whether to generate the extra information, use
+    -gstabs+, -gstabs, -gxcoff+, -gxcoff, or -gvms (see below).
+
+    GCC allows you to use -g with -O.  The shortcuts taken by optimized
+    code may occasionally produce surprising results: some variables you
+    declared may not exist at all; flow of control may briefly move
+    where you did not expect it; some statements may not be executed
+    because they compute constant results or their values are already at
+    hand; some statements may execute in different places because they
+    have been moved out of loops.
+
+    Nevertheless it proves possible to debug optimized output.  This
+    makes it reasonable to use the optimizer for programs that might
+    have bugs.
+
+Not really much useful stuff to do for one file examples to improve a Makefile.
+Had a look a DJ Greaves' make files.
+	arbitrary commands can be defined
+	arbitary variables too
+	what is Makefile.inc?
+		seems like an overall file with common code it is *include*-d	

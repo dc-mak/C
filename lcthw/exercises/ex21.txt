@@ -1,0 +1,19 @@
+type modifiers:
+---
+volatile			compiler should leave this alone during optimisations
+register			suggests compiler should put this variable in register
+					only for measurable performance improvement
+
+types:
+---
+	[u]int(N)_t
+[u]int_[least/fast](N)_t
+	[u]int[ptr/max]_t
+
+values:
+---
+	[U]INT(N)_[MIN/MAX]
+	[U]INT[PTR/MAX]_[MIN/MAX]
+[U]INT_[LEAST/FAST](N)_[MIN/MAX]
+	PTRDIFF_[MIN/MAX]
+	SIZE_MAX
