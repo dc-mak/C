@@ -133,16 +133,16 @@ void Database_create(struct Connection *conn,
 
 struct Connection *Connection_open(const char *filename)
 {
-	struct Connection conn;
+	struct Connection *conn = malloc(sizeof(struct Connection));
 	if (!conn)
-		die(&conn, "Memory error");
+		die(conn, "Memory error");
 
 	struct Database db;
-	conn.db = &db;
-	if (!conn.db)
-		die(&conn, "Memory error");
+	conn->db = &db;
+	if (!conn->db)
+		die(conn, "Memory error");
 
-	return &conn;
+	return conn;
 }
 
 void Address_write(struct Connection *conn)
