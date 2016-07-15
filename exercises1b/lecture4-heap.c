@@ -24,6 +24,7 @@ typedef struct tree {
 	struct tree *right;
 } tree;
 
+// Assume malloc and calloc are always successful to avoid error handling. */
 void insert(const int val, tree *const t)
 {
 	if (t->Lf) {
