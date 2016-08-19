@@ -30,3 +30,6 @@
 
 # Debug files
 *.dSYM/
+
+# Lectures
+# lcthw/learn-c-the-hard-way-lectures/
